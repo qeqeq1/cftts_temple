@@ -55,8 +55,8 @@
         input[type="range"] {
             display: block;
             width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
+            padding: 8px;
+            border: 2px solid #ccc;
             border-radius: 5px;
             margin-bottom: 15px;
             font-size: 14px;
@@ -78,7 +78,7 @@
 
         button {
             width: 100%;
-            padding: 12px;
+            padding: 12px 20px;
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -118,13 +118,20 @@
         <p>调整音调</p>
         <input type="range" id="pitchRange" min="0" max="100" value="0">
         <p>输入待转语音的文本，不超过300字：</p>
-        <textarea id="ssmlInput" rows="4"></textarea>
-        <button onclick="playAudio()">播放音频</button>
+        <textarea id="ssmlInput" rows="6"></textarea>
+        <div style="margin-bottom: 5px;">
+            <button onclick="playAudio()">播放音频</button>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <button onclick="downloadAudio()">下载音频</button>
+        </div>
+
+
         <audio id="audioPlayer" controls></audio>
         <p>遵守<a href="https://privacy.microsoft.com/zh-cn/privacystatement">微软隐私权政策</a>，本站不存储任何您的信息，所有版权归Microsoft
             Azure或对应权利人所有</p>
 
-        <p>Made with Love by <a href="https://kewu.cc">kewu.cc</a> | <a href="https://miko.pw">Miko.pw</a> </p>
+        <p>Made with Love by <a href="https://kewu.cc">kewu.cc</a> | <a href="https://miko.pw">Miko.pw</a> V1.2 Running on <a href="https://developers.cloudflare.com/workers/">Cloudflare Workers</a> </p>
     </div>
 
 
